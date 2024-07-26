@@ -697,6 +697,5 @@ for route in optimized['routes']:
     folium.PolyLine(locations=[list(reversed(coords)) for coords in ors.convert.decode_polyline(route['geometry'])['coordinates']], color=line_colors[route['vehicle']]).add_to(m)
 m
 ```
-```
+
 ![Optimied Route for the three vehicle](map1.png)
-```
