@@ -297,6 +297,10 @@ for route in optimized['routes']:
 m
 ```
 
+```
+![Optimied Route for the three vehicle](map1.png)
+```
+
 
 ## Extract more information from the Route
 
@@ -692,4 +696,7 @@ coords = df.apply(lambda row: [row['longitude'], row['latitude']], axis=1).tolis
 for route in optimized['routes']:
     folium.PolyLine(locations=[list(reversed(coords)) for coords in ors.convert.decode_polyline(route['geometry'])['coordinates']], color=line_colors[route['vehicle']]).add_to(m)
 m
+```
+```
+![Optimied Route for the three vehicle](map1.png)
 ```
