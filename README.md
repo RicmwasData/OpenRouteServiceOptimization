@@ -297,9 +297,9 @@ for route in optimized['routes']:
 m
 ```
 
-```
+
 ![Optimied Route for the three vehicle](map1.png)
-```
+
 
 
 ## Extract more information from the Route
@@ -697,5 +697,15 @@ for route in optimized['routes']:
     folium.PolyLine(locations=[list(reversed(coords)) for coords in ors.convert.decode_polyline(route['geometry'])['coordinates']], color=line_colors[route['vehicle']]).add_to(m)
 m
 ```
+This is the final map after adding the arrival time. 
+![Optimied Route for the three vehicle](map2.png)
 
-![Optimied Route for the three vehicle](map1.png)
+
+## References
+
+1. [VROOM Project API Documentation](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md)
+2. [Vehicle Route Optimization in Python with OpenRouteService](https://syntaxbytetutorials.com/vehicle-route-optimization-in-python-with-openrouteservice/)
+3. [OpenRouteService](https://openrouteservice.org/)
+4. [Folium GeoJSON Marker Guide](https://python-visualization.github.io/folium/latest/user_guide/geojson/geojson_marker.html)
+5. [OpenRouteService Python Routing Optimization Example](https://github.com/GIScience/openrouteservice-examples/blob/master/python/Routing_Optimization_Idai.ipynb)
+
